@@ -1,0 +1,26 @@
+
+
+	
+	Regulation of macrophage physiology by L-arginine: role of the oxidative L-arginine deiminase pathway.
+	
+	
+The L-arginine content of the extracellular fluid in sites of predominant macrophage infiltration is reduced below plasma levels due to the activity of macrophage-derived arginase. Investigation of the effects of altered L-arginine availability on macrophage physiology reveals that culture of rat peritoneal macrophages in media containing L-arginine in the concentrations present in inflammatory lesions (less than 0.1 mM) enhances activation-associated functions. In contrast, culture in the higher L-arginine concentrations found in standard tissue culture media (0.4 to 1.2 mM) suppresses most macrophage functions (superoxide production, phagocytosis, and protein synthesis). An exception is the tumor cytotoxicity of Corynebacterium parvum-elicited macrophages which is enhanced by culture in supraphysiologic concentrations of L-arginine. Work reported here investigated the mechanisms for these L-arginine-dependent effects and, more specifically, the role of the recently described oxidative L-arginine deiminase pathway in the regulation of macrophage physiology. Overnight culture of resident or C. parvum-elicited peritoneal macrophages in media containing increasing concentrations of L-arginine (6 microM to 1 mM) resulted in: inhibition of electron transport chain activity (resident and C. parvum-elicited macrophages), increased lactate production (resident macrophages), and decreased ATP content (resident and C. parvum-elicited macrophages). In line with these findings, viability was markedly decreased after 2 days of culture when the initial L-arginine concentration was greater than or equal to 0.1 mM. As shown before, increasing media concentrations of L-arginine were associated with suppression of superoxide production and cytotoxicity in resident macrophages, and with reduced superoxide production and increased cytotoxicity in C. parvum-elicited macrophages. All L-arginine-dependent metabolic and functional alterations, as well as the loss of viability, were prevented by NG-monomethyl-L-arginine, a specific inhibitor of the oxidative L-arginine deiminase pathway. These results demonstrate that flux of L-arginine through the oxidative L-arginine deiminase pathway results in the inhibition of oxidative metabolism in rat macrophages. This metabolic inhibition may, through alterations in the macrophage high energy phosphate stores, mediate the suppression of cell functions and result ultimately in cell death.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

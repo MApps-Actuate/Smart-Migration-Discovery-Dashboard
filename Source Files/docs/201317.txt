@@ -1,0 +1,22 @@
+
+
+	
+	Alveolar pressure inhomogeneity and gas exchange during constant-flow ventilation in dogs.
+	
+	Analysis of momentum transfer between inflow jets and resident gas during constant-flow ventilation (CFV) predicts inhomogeneity of alveolar pressures (PA) and volume, which might account for specific ventilation-variance in the lung. Using alveolar needles to measure pressures (PA) during CFV in eight anesthetized dogs with wide thoracotomy, we observed random dispersion of PA among lobes of up to 12.5 cmH2O. Within each lobe, the PA dispersion was up to 10 cmH2O at CFV of 90 l/min; when flow decreased, PA at all sites decreased, as did the intralobar dispersion. These pressure differences were not observed during conventional mechanical ventilation (CMV). During CFV with room air, dogs were hypoxemic [arterial PO2 (Pao2) 54 +/- 15 Torr] and the venous admixture (Qva/QT) was 50 +/- 15%. When inspiratory O2 fraction was increased to 0.4, Pao2 increased to 172 +/- 35 Torr and Qva/QT dropped to 13.5 +/- 8.4%, confirming considerable ventilation-perfusion (VA/Q) variance not observed during CMV. We conclude that momentum transfer between the inflow stream and resident gas caused inhomogeneities of alveolar pressures, volumes, and ventilation responsible for VA/Q variance and hypoxemia during CFV. Conceivably, the abnormal ventilation distribution is minimized by collateral ventilation and forces of interdependence between regions of high and low alveolar pressures. Momentum transfer also predicted the mucosal damage observed on histological evaluation of the bronchial walls near the site of inflow jet impact.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

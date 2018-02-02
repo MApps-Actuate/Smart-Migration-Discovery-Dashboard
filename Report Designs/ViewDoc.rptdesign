@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="units">in</property>
+    <property name="theme">ThemesSmartMigration.Celestial</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesSmartMigration.rptlibrary</property>
+            <property name="namespace">ThemesSmartMigration</property>
+        </structure>
+    </list-property>
+    <method name="onContentUpdate"><![CDATA[var opts = new actuate.viewer.UIOptions();
+opts.enableToolBar(false);
+this.getViewer().setUIOptions(opts);]]></method>
+    <parameters>
+        <scalar-parameter name="pDocName" id="4">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">/Applications/Smart Migration Discovery Dashboard/Source Files/docs/200408.txt</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <property name="backgroundColor">#2D2D2D</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="8">
+            <property name="fontFamily">"Lato"</property>
+            <property name="color">#FFBD00</property>
+            <property name="display">block</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[
+<form id="DocView" method="post" action="http://ot-election-otca.eastus.cloudapp.azure.com/otcademo/index.php?op=Analyze%20Text&amp;configuration=lifescience">
+<div style="padding:25px">
+	<table>
+		<tbody>
+			<tr>
+				<td><div id="heading1"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="2"><div id="viewer1" style="display:none"></div></td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="hidden" name="text_to_analyze" id="analyze">
+</div>
+</form>
+
+<script>
+	$('[id*="status1"').hide();
+	$('[id*="status2"').hide();
+	$('[id*="status3"').hide();
+	$('[id*="status4"').hide();
+	
+	var rpt = "<VALUE-OF>params["pDocName"].value</VALUE-OF>";
+	var rptExt = rpt.split('.').pop().toLowerCase();
+	var rptName = rpt.replace(/^.*[\\\/]/, '');
+	
+	$(".reporttitle_text")[0].innerHTML = rptName;
+	document.getElementById("heading1").innerHTML = "<h3>Processing " + rptName + "</h3>";
+	
+	document.getElementById("viewer1").innerHTML = "<iframe id='txtFrame' width='700px' height='600px' src='/iportal/servlet/DownloadFile/" + rptName + "?name=" +  encodeURIComponent(rpt) + "&amp;fileExtension=" + rptExt + "&amp;__vp=Default%20Volume&amp;volume=Default%20Volume&amp;showBanner=false' /iframe>";
+
+	setTimeout(function() {
+		document.getElementById("analyze").value = $('pre', txtFrame.contentDocument).text();
+		$('#DocView').submit();
+	}, 4500);
+
+</script>]]></text-property>
+        </text>
+        <grid id="35">
+            <property name="width">5in</property>
+            <column id="767">
+                <property name="width">0.8229166666666666in</property>
+            </column>
+            <column id="36">
+                <property name="textAlign">left</property>
+                <property name="width">2.6875in</property>
+            </column>
+            <column id="37">
+                <property name="textAlign">left</property>
+                <property name="width">0.25in</property>
+            </column>
+            <column id="38">
+                <property name="textAlign">left</property>
+                <property name="width">0.25in</property>
+            </column>
+            <column id="39">
+                <property name="textAlign">left</property>
+                <property name="width">0.25in</property>
+            </column>
+            <column id="40">
+                <property name="textAlign">left</property>
+                <property name="width">0.25in</property>
+            </column>
+            <column id="41">
+                <property name="textAlign">left</property>
+                <property name="width">0.25in</property>
+            </column>
+            <row id="42">
+                <property name="verticalAlign">middle</property>
+                <property name="height">30px</property>
+                <cell id="763"/>
+                <cell id="43">
+                    <property name="verticalAlign">middle</property>
+                    <label id="25">
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#FFBD00</property>
+                        <property name="display">block</property>
+                        <expression name="bookmark" type="javascript">"status1"</expression>
+                        <text-property name="text">Identifying Language</text-property>
+                    </label>
+                </cell>
+                <cell id="44">
+                    <text id="5">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress1_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="45">
+                    <text id="60">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress1_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="61">
+                    <text id="62">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress1_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="63">
+                    <text id="64">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress1_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="65">
+                    <text id="66">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress1_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="67">
+                <property name="verticalAlign">middle</property>
+                <property name="height">30px</property>
+                <cell id="764"/>
+                <cell id="68">
+                    <property name="verticalAlign">middle</property>
+                    <label id="26">
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#FFBD00</property>
+                        <expression name="bookmark" type="javascript">"status2"</expression>
+                        <text-property name="text">Determining Content Type</text-property>
+                    </label>
+                </cell>
+                <cell id="69">
+                    <text id="732">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress2_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="733">
+                    <text id="735">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress2_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="736">
+                    <text id="738">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress2_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="739">
+                    <text id="741">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress2_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="742">
+                    <text id="744">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress2_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="745">
+                <property name="verticalAlign">middle</property>
+                <property name="height">30px</property>
+                <cell id="765"/>
+                <cell id="33">
+                    <property name="verticalAlign">middle</property>
+                    <label id="27">
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#FFBD00</property>
+                        <expression name="bookmark" type="javascript">"status3"</expression>
+                        <text-property name="text">Extracting Concepts and Terms</text-property>
+                    </label>
+                </cell>
+                <cell id="34">
+                    <text id="746">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress3_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="747">
+                    <text id="748">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress3_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="749">
+                    <text id="750">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress3_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="751">
+                    <text id="752">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress3_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="753">
+                    <text id="754">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress3_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="755">
+                <property name="verticalAlign">middle</property>
+                <property name="height">30px</property>
+                <cell id="766"/>
+                <cell id="756">
+                    <property name="verticalAlign">middle</property>
+                    <label id="32">
+                        <property name="fontFamily">"Lato"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#FFBD00</property>
+                        <expression name="bookmark" type="javascript">"status4"</expression>
+                        <text-property name="text">Analyzing Sentiment and Subjectivity</text-property>
+                    </label>
+                </cell>
+                <cell id="757">
+                    <text id="734">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress4_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="758">
+                    <text id="737">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress4_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="759">
+                    <text id="740">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress4_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="760">
+                    <text id="743">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress4_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="761">
+                    <text id="762">
+                        <property name="display">block</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id="progress4_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+        </grid>
+        <text id="731">
+            <property name="display">none</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script>
+$('[id*="status1"]').fadeIn("fast");
+	$('#progress1_1').fadeIn("fast", function() {
+		$('#progress1_2').fadeIn("fast", function() {
+			$('#progress1_3').fadeIn("fast", function () {
+				$('#progress1_4').fadeIn("fast", function() {
+					$('#progress1_5').fadeIn("fast", function() {
+						//do something
+					});
+				});
+			});
+		});
+	});
+
+setTimeout(function() {
+$('[id*="status2"]').fadeIn("fast");
+	$('#progress2_1').fadeIn("fast", function() {
+		$('#progress2_2').fadeIn("fast", function() {
+			$('#progress2_3').fadeIn("fast", function () {
+				$('#progress2_4').fadeIn("fast", function() {
+					$('#progress2_5').fadeIn("fast", function() {
+						//do something
+					});
+				});
+			});
+		});
+	});
+}, 1000);
+
+setTimeout(function() {
+$('[id*="status3"]').fadeIn("fast");
+	$('#progress3_1').fadeIn("fast", function() {
+		$('#progress3_2').fadeIn("fast", function() {
+			$('#progress3_3').fadeIn("fast", function () {
+				$('#progress3_4').fadeIn("fast", function() {
+					$('#progress3_5').fadeIn("fast", function() {
+						//do something
+					});
+				});
+			});
+		});
+	});
+}, 2000);
+
+setTimeout(function() {
+$('[id*="status4"]').fadeIn("fast");
+	$('#progress4_1').fadeIn("fast", function() {
+		$('#progress4_2').fadeIn("fast", function() {
+			$('#progress4_3').fadeIn("fast", function () {
+				$('#progress4_4').fadeIn("fast", function() {
+					$('#progress4_5').fadeIn("fast", function() {
+						//do something
+					});
+				});
+			});
+		});
+	});
+}, 3000);
+
+setTimeout(function() {
+$('[id*="status5"]').fadeIn("fast");
+	$('#progress5_1').fadeIn("fast", function() {
+		$('#progress5_2').fadeIn("fast", function() {
+			$('#progress5_3').fadeIn("fast", function () {
+				$('#progress5_4').fadeIn("fast", function() {
+					$('#progress5_5').fadeIn("fast", function() {
+						//do something
+					});
+				});
+			});
+		});
+	});
+}, 4000);
+</script>
+]]></text-property>
+        </text>
+    </body>
+</report>

@@ -1,0 +1,25 @@
+
+
+	
+	Risk of carotid endarterectomy in the elderly.
+	
+	We used the Medicare claims files to describe operative mortality for 2,089 New England residents over the age of 65 who underwent carotid endarterectomy in 1984 and 1985. For patients ages 65 to 69, the risk of death within 30 days of surgery was 1.1 percent, (95% confidence interval = 0.5, 2.1), for those ages 70 to 74, 2.8 percent (1.7, 4.4), for those ages 75 to 79, 3.2 percent (1.8, 5.2), and for those over age 80, 4.7 percent (2.3, 8.5). Nearly 80 percent of patients underwent surgery at hospitals performing 40 or fewer carotid endarterectomies per year on the Medicare population. The adjusted odds ratio for 30 day mortality for patients undergoing surgery in these low-volume hospitals was 2.8 (95% CI = 1.1, 7.2) compared to higher volume hospitals. Although the Medicare claims data provided only limited data about post-operative strokes, analysis of post-operative stroke risk supported these findings.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

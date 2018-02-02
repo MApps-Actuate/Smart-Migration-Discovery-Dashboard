@@ -1,0 +1,24 @@
+
+
+	
+	Display of the alveolar plateau of single-breath tests in "dilution index" format.
+	
+	
+In 1949, Fowler (J. Appl. Physiol. 2: 283-299) advocated calculation of a "dilution index" from data of the alveolar plateau of single-breath tests; the calculation provides an estimate of the dilution of resident gas in the lung that gave rise to the observed concentrations. In this communication, we show that the calculation can be applied to conventional single-breath tests where O2 is inhaled by air-breathing persons, and we illustrate the principle with vital capacity breaths of a mixture that contained a low concentration of neon. The dilution was approximately 3:1 in young subjects (20-30 yr), as if a vital capacity of 6 liters were mixed with a residual volume of 2 liters. The dilution was less, 2:1, in older subjects (56 yr) and tended to become as low as 1:1 during emptying of the closing volume. In addition to being more informative, the dilution index format allows common sense comparison of alveolar plateau levels and slopes when single-breath tests are done by various methods.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

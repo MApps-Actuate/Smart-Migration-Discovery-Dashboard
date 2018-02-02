@@ -1,0 +1,8 @@
+ Document aging ratio (New documents - last 7 years),Document aging ratio (Old documents - more than 10 years),Aging Ratio,Time (Year),TimeSort,Document aging ratio (Total),Current Numbers,%,Ratio,After removal,After 1 year,Ratio (1 year),After 2 years,Ratio (2 years),Ratio (3 years),Ratio (4 years),Ratio (5 years)
+5751/24408 *100 = 23.56,20639/24408*100 = 84.55,-60.99,Current,1,5751 + 20639/24408 * 100 = 108.12,5751,11.3267,23.56,23.56,5751,23.56,5751,23.56,23.56,23.56,23.56
+,,0,Removal,2,,24408,48.0467,-60.99,0,22861,16.01,20589,5.06,4.9,1.2,-3.14
+,,16.01,After 1 year,3,,20639,40.6266,84.55,23.56,1727,7.55,3819,18.5,18.66,22.36,26.7
+,,5.06,After 2 years,4,,50798,,108.12,,,,,,,,
+,,4.9,After 3 years ,5,,,,,,,,,,,,
+,,1.2,After 4 years,6,,,,,,,,,,,,
+,,-3.14,After 5 years,7,,,,,,,,,,,,

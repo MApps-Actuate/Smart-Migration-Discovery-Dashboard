@@ -1,0 +1,23 @@
+
+
+	
+	Accuracy of decisions to withdraw therapy in critically ill patients: clinical judgment versus a computer model.
+	
+	Two clinicians and the nursing sisters working in the ICU evaluated the chance of survival of ICU patients every day. Patients were assessed either as "outcome unknown or will die." These predictions were compared with those made by computerized trend analysis of daily acute physiology and chronic health evaluation (APACHE II) scores corrected for the presence and duration of major organ system failure. The predictions were not acted upon during the study. Comparing the predictions with actual hospital outcome, the doctors and nurses had a false-positive diagnosis rate for dying of between 7.7% and 16.7%, while there were no false predictions by the computer model. The patients predicted to die by the doctors and nurses were not completely identical to those predicted by the computer. Predictions of doctors and nurses that were confirmed by the computer had a sensitivity of 20% and no false predictions of death.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

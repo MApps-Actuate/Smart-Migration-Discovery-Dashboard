@@ -1,0 +1,25 @@
+
+
+	
+	Computerization of academic vascular surgery.
+	
+	Academic surgical units have a combination of computer needs, including access to the surgical literature, storage and retrieval of patient registry data, laboratory, and research data, generation of reports; statistical analysis of data; and word processing. A system that fulfills these requirements was developed for an academic vascular surgical unit. The system integrates these functions in a multi-user environment and is accessed from menus on multiple terminals in laboratories and offices in three hospitals and in staff members' homes. Databases currently include more than 7000 references to published articles in vascular surgery, a vascular registry consisting of more than 7500 patients, patient data from three integrated noninvasive vascular laboratories, data generated from both clinical and basic research, and a log of resident, fellow, and faculty operative experience. Statistical analysis, using essentially all modern statistical methods including sophisticated log-rank, proportional hazards, and multivariant analyses, can be performed on all databases, either separately or in any combination, without the need to reenter data. An electronic mail and messaging system provides for paperless communication between surgeons, research personnel, and clerical staff.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

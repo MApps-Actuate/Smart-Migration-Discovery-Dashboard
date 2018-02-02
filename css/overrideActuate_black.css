@@ -1,0 +1,85 @@
+/*
+********************************
+* Override some Actuate style
+*********************************
+*/
+.actuate-dashboard-tab-strip-top .actuate-tab-strip-over .actuate-tab-right {
+  	background-color: #333333 !important;
+}
+/* Dashboard panel */
+.actuate-widget-border-panel {
+  	background-color: #1d1d1d !important;
+}
+.actuate-dashboard-ux-tab-inline-toolbar-area {
+  	background: #1d1d1d !important;
+}
+.actuate-tab-panel ul, .actuate-tab-panel ol {
+  	background-color: #1d1d1d !important;
+}
+.actuate-widget-border-layout-ct {
+  background: #1d1d1d !important;
+}
+.actuate-dashboard-tab-panel {
+  	border: none !important;
+}
+.actuate-dashboard-gadget-tab-content {
+  	border-top: none !important
+}
+ul.actuate-dashboard-tab-strip li {
+  	border-right: none !important;
+}
+.actuate-tab-strip-active span.actuate-tab-strip-text {
+  	color: #2086bf;
+}
+.actuate-dashboard-tab-strip span.actuate-tab-strip-text {
+  	color: #FFF; 
+}
+.actuate-dashboard-non-editable {
+	color: #FFF !important;
+}
+/* Gadget panel */
+.actuate-dashboard-gadget-item {
+  border: none !important;
+}  
+.actuate-dashboard-gadget-item, .actuate-dashboard-gadget-item-noborder {
+  	background-color: #2D2D2D !important;
+}
+.actuate-widget-panel-mc {
+	background: transparent ;
+}
+.actuate-widget-panel-body {
+  	background: transparent ;
+}
+.actuate-selector-panel {
+  	background: #2D2D2D ;
+}
+.actuate-dashboard-gadget-item > .actuate-widget-panel-tl > .actuate-widget-panel-tr > .actuate-widget-panel-tc > .actuate-widget-panel-header {
+  	background: #2D2D2D !important;
+}
+.actuate-dashboard-gadget-item > .actuate-widget-panel-bwrap > .actuate-widget-panel-ml {
+ 	background: #2D2D2D !important;
+}
+.actuate-dashboard-gadget-item > .actuate-widget-panel-bwrap > .actuate-widget-panel-ml > .actuate-widget-panel-mr > .actuate-widget-panel-mc {
+ 	background: #2D2D2D !important;
+}
+.actuate-dashboard-gadget-item > .actuate-widget-panel-tl > .actuate-widget-panel-tr > .actuate-widget-panel-tc > .actuate-widget-panel-header > .actuate-widget-panel-header-text {
+	color : #fff !important;
+}
+.actuate-selector-panel-header, .actuate-selector-radio-panel .actuate-form-cb-label {
+	color : #fff !important;
+}
+.actuate-selector-list-border {
+  background-color: #2D2D2D !important;
+}
+.actuate-selector-panel .actuate-selector-list .actuate-list-selected {
+  	color: #2086bf;
+}
+.actuate-list-item {
+  	color: #fff;
+}
+.actuate-unselectable, .actuate-unselectable * {
+	color: #fff;
+}
+.actuate-dashboard-view-outerwrapper > .actuate-widget-panel-bwrap > .actuate-widget-panel-ml > .actuate-widget-panel-mr > .actuate-widget-panel-mc {
+	background-color: #1d1d1d !important;
+}

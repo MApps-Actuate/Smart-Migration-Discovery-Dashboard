@@ -1,0 +1,16 @@
+
+
+	
+	A microcomputer-based vital records data base with interactive graphic assessment for states and localities.
+	
+	Vital records data bases describe large populations over long periods of time, yet their organization and size often preclude or discourage their use. We constructed a microcomputer-based data base of all singleton births in Massachusetts, 1975-84. The original data were stored in 700,000 records, each 174 bytes long, occupying a total of over 120 megabytes (MB). By removing redundant information and unique identifiers, and packing the data, we store 21 fields of this information in a 16-byte record resulting in a data base of 11.1 MB, a saving of over 90 percent of disk space. By using programs written expressly for this data base, we can display a birth weight frequency plot of the entire data set in under 65 seconds on an IBM-compatible PC-AT. Comparable assessments in SAS-PC took over 105 minutes and in main frame SAS on an AS-9000 took over 37 CPU seconds. Implementing similar systems for state registries on births, deaths, cancers, and birth defects potentially offers investigators easy access to vast stores of information and would enable public health officials to produce timely reports, initiate a variety of surveillance activities, and respond rapidly to residents' inquiries about clusters and anomalous disease patterns.
+	
+		
+		
+		
+		
+		
+		
+	
+
+

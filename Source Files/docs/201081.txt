@@ -1,0 +1,16 @@
+
+
+	
+	An enhancement of inpatient diagnosis clusters: applications to residency training.
+	
+	The diagnosis cluster method has recently been used effectively to compare inpatient and outpatient clinical experiences across data sets for practicing physicians and family practice residents. This paper describes the use of the diagnosis cluster method to study the three-year experience of a class of family practice residents in one university program and three community hospital programs. A group of 10 additional clusters based on the criteria of frequency, clinical homogeneity, and educational importance were identified covering 14.3% of the diagnoses not falling within the established 52-cluster method. These residency-specific clusters require review and validation by further analysis of clinical data and peer review by faculty involved in residency education.
+	
+		
+		
+		
+		
+		
+		
+	
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<title>Smart Migration Discovery Dashboard</title>
+	
+	<script type="text/javascript" src="/iportal/jsapi"></script>
+	
+	<script>
+		actuate.load("dashboard");
+		var reqOps = new actuate.RequestOptions( );
+		reqOps.setRepositoryType(actuate.RequestOptions.REPOSITORY_ENCYCLOPEDIA);
+		actuate.initialize( '/iportal/', reqOps, null, null, myInit);
+		
+		function myInit(paramValues){
+			viewer = new actuate.Dashboard( 'acContainer1' );
+			viewer.setDashboardName("/Applications/Smart Migration Discovery Dashboard/Dashboards/Smart Migration Discovery Dashboard.dashboard");	
+			viewer.setSize(1550,1000);
+			viewer.submit();
+
+		$('head').append('<link id="myCSS" rel="stylesheet" type="text/css" href="css/blank.css">');
+		$("#myCSS").attr("href", "css/overrideActuate_black.css");
+		}
+	</script>
+</head>
+
+<body>
+<div id="banner" style="background-color:#1d1d1d; width:1550px; height:60px;" align="left"><img src="img/Smart Migration.png" height="75px" style="padding-left:20px"></div>
+<div>
+
+	<section class="acContent">
+<!-- Default container section -->      			
+        <div id="defaultDisplaySectionFull">
+			<div id="acContainer1" class="acDashboard"></div>
+        </div>
+	</section>
+</div>
+</body>
+
+
+</html>

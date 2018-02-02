@@ -1,0 +1,29 @@
+
+
+	
+	A phase II clinical trial of adoptive immunotherapy for advanced renal cell carcinoma using mitogen-activated autologous leukocytes and continuous infusion interleukin-2.
+	
+	Forty patients with metastatic, recurrent, or unresectable renal cell carcinoma were entered into a study of the therapeutic efficacy of adoptive immunotherapy using periodate (IO4-) and interleukin-2 (IL2)-activated autologous leukocytes and continuous infusion low-dose IL2. Patient survival was also examined. The first 15 consecutive patients were enrolled in protocol A without an IL2 priming phase and the following 25 patients were entered in protocol B where a 5-day priming phase was initiated before leukapheresis. A maintenance regimen consisted of either 3 x 10(6) units of recombinant interferon-alpha (rIFN-alpha), three times per week only or together with leukapheresis and infusion of IO4-/IL2-activated cells and 2 days of continuous infusion IL2 per month. Thirty-four patients completed the protocol treatment. Four patients were removed from the study owing to rapid tumor progression and two patients died while receiving treatment. The clinical response rate was 22%: two patients had a complete response and five patients had a partial response. Among the 25 patients who had no clinical response, 11 patients had either a mixed response or stabilization. Neither response, response duration, nor site response correlated with the total dose of IL2 administered or the number of activated killer cells infused. Patients who received maintenance therapy had longer survival times than patients who did not receive such therapy. All toxicity and side effects associated with IL2 treatment were transient and resolved after discontinuation of the drug. Patients on maintenance therapy tolerated both rIFN-alpha and monthly infusions of activated killer cells and IL2 well. This study confirms the concept of adoptive immunotherapy as a new treatment approach for advanced renal cell carcinoma and suggests that maintenance therapy may prolong survival time.
+	
+		<Category>
+Adult</Category>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

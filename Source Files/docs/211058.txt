@@ -1,0 +1,21 @@
+
+
+	
+	Predictors of the initiation of psychotherapeutic medicine use.
+	
+	This study examined the hypothesized predictive association between illicit drug use and the onset of prescribed psychotherapeutic medicine use. The effect of psychiatric symptoms on this relationship was also explored. Data were gathered retrospectively, through standardized household interviews conducted in 1981 for the Baltimore site of the National Institute of Mental Health Epidemiologic Catchment Area Program. For this analysis, the sample was restricted to 1,716 respondents ages 18-44 at the time of interview, drawn by probability sampling area household residents of all adult ages. Using Cox proportional hazards models, the onset of psychotherapeutic medicine use was modeled as a function of illicit drug use and psychiatric symptoms, both defined as time-dependent covariates. Newly observed in this analysis was an independent association of illicit drug use with psychotherapeutic medicine use, which was unexplained by psychiatric symptoms (relative hazard = 2.61, 95% confidence interval (CI) = 2.15, 3.18). Adjustment for age of onset of alcohol intoxication did not alter the impression that illicit drug users were more likely to initiate use of prescribed psychotherapeutic medicines (relative hazard = 2.52, 95% CI = 2.02, 3.11).
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

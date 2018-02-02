@@ -1,0 +1,26 @@
+
+
+	
+	Mobility of gentamicin resistance genes from staphylococci isolated in the United States: identification of Tn4031, a gentamicin resistance transposon from Staphylococcus epidermidis.
+	
+	
+Homologous genes encoding resistance to gentamicin, tobramycin, and kanamycin through the bifunctional acetylating [AAC(6')] and phosphorylating [APH(2")] aminoglycoside-modifying enzyme were identified in staphylococci isolated from patients in the United States. The mobility of gentamicin resistance (Gmr) genes found on a prototype conjugative plasmid (pGO1) was compared with that of genes cloned from chromosomal sites. Plasmid-encoded Gmr genes and flanking sequences were introduced onto a temperature-sensitive plasmid (pRN3208) from pGO1 by homologous recombination between insertion sequence-like elements present on both replicons. Growth of Staphylococcus aureus strains containing the temperature-sensitive recombinant (pGO161) at the nonpermissive temperature for plasmid replication (42 degrees C) revealed no translocation of Gmr from its plasmid location. A transposon (Tn551) resident on the same replicon did translocate. Chromosomal Gmr determinants were cloned, together with the gene for trimethoprim resistance (dfrA), from three geographically distinct S. epidermidis isolates; two were subcloned onto temperature-sensitive Escherichia coli-S. aureus shuttle plasmids as 7.2-kilobase BglII fragments. Growth of both recombination-deficient and-proficient S. aureus strains containing the cloned genes at 42 degrees C allowed detection of transposition of Gmr sequences and identification of insertion into random chromosomal sites. We have designated this 5-kilobase transposon from S. epidermidis as Tn4031.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

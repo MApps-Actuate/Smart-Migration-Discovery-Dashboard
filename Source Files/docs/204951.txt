@@ -1,0 +1,30 @@
+
+
+	
+	Exogenous C1q reconstitutes resident but not inflammatory mouse peritoneal macrophages for Fc receptor-dependent cellular cytotoxicity and phagocytosis. Relationship to endogenous C1q availability.
+	
+	Murine resident peritoneal macrophages (PM) were refractory to activation for antibody-dependent cellular cytotoxicity (ADCC) of SRBC targets as compared with either oil or thioglycollate-elicited inflammatory macrophages. Western blot analysis of macrophage cellular lysates indicated a direct correlation between the endogenous C1q levels and their innate response to activation for ADCC. Inflammatory PM had 7- to 14-fold higher C1q levels (ca. 23 to 45 ng C1q/100 micrograms protein) than resident PM (ca. 3 ng C1q/100 micrograms protein) as determined by densitometric scanning of blots. Purified exogenous mouse or human C1q were found to reconstitute the response of resident PM for ADCC mediated by C-activating mouse IgG2a or IgG2b mAb, but not by non-C-activating IgG1. Thioglycollate-elicited PM with highest endogenous C1q levels were unaffected by exogenous C1q, whereas oil-elicited PM with intermediate C1q levels were slightly augmented in their ADCC response by exogenous C1q. Augmentation of the resident PM response for ADCC activation was accomplished by either coincubation of effector macrophages with physiologic concentrations of C1q (0.5 to 4.0 micrograms/ml), IgG, and SRBC targets or by IgG and C1q preopsonized targets. FcR-dependent phagocytosis by resident PM was similarly reconstituted by exogenous C1q. The results indicate that resident macrophages with low potential for C1q biosynthesis and secretion were reconstituted by exogenous C1q in their FcR-dependent phagocytosis and ADCC, whereas inflammatory macrophages with sufficient endogenous C1q levels were largely unaffected. Thus C1q appears to have a pivotal mechanistic role in the initiation of macrophage activation for FcR-dependent effector functions.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

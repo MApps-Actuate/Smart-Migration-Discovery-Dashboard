@@ -1,0 +1,22 @@
+
+
+	
+	Using clinical data to predict abnormal serum electrolytes and blood cell profiles.
+	
+	
+OBJECTIVE: To identify clinical predictors of five abnormalities on the serum electrolyte panel and two abnormalities on the blood cell profile, to study which data elements carried predictive information, and to measure the predictive accuracy and stability of the resulting predictive equations. DESIGN: Prospective data collection from a computerized medical database supplemented by data entered by physicians who ordered outpatient tests into microcomputers. Equations were derived during an eight-month period and later validated twice in the same setting. SETTING: Academic primary care practice affiliated with a county hospital. PATIENTS AND PARTICIPANTS: Patients were mostly black women; physicians were full-time academic general internists and medical residents. MEASUREMENTS AND MAIN RESULTS: There were 6,570 electrolyte and blood cell profile panels ordered during the equation derivation period. The mean receiver operating characteristic (ROC) curve area for the seven equations was 0.849. For the 4,977 tests ordered during ten months of prospective validation, the mean ROC curve area was only 3% less. For three equations, ROC curve areas were lower for patients with unscheduled visits than for those with scheduled visits (p less than 0.05). Except for two equations involving abnormalities with very low prevalences, the equations were also well calibrated. Prior results for the abnormality being considered were the strongest predictors, followed by other laboratory results, diagnoses, and the physicians' estimate of the probability that the test would be abnormal. CONCLUSIONS: Clinical data can accurately predict abnormal results of common outpatient laboratory tests. Computers can help find the necessary data and produce estimates of risk.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

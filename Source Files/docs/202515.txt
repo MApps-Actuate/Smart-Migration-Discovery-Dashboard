@@ -1,0 +1,25 @@
+
+
+	
+	Fetal monitoring and predictions by clinicians: observations during a randomized clinical trial in very low birth weight infants.
+	
+	Predictions about perinatal outcome in very low birth weight infants were studied in a randomized clinical trial of electronic fetal monitoring and periodic auscultation to assess the effect of diagnostic monitoring information on clinicians' ability to predict perinatal outcomes. The only predictions consistently correct before monitoring information was available were those regarding infant survival (88% correct, kappa [kappa] = 0.40, P less than .001 for the electronic fetal monitoring group; 80% correct, kappa = 0.35, P less than .01 for the periodic auscultation group). After monitoring, predictions of 5-minute Apgar scores and arterial cord pH were significantly more accurate, and clinicians' confidence in their predictions increased significantly in both the electronic fetal monitoring and the auscultation groups. Predictions of 5-minute Apgar scores were significantly more accurate in the electronic fetal monitoring group (92% correct, kappa = 0.80) than in the periodic auscultation group (61% correct, kappa = 0.28) (Z difference = 3.04; P less than .01). We conclude that clinicians gain information during intrapartum monitoring that generally leads to improved predictions and increased confidence in predictions. In this study, they made more accurate predictions about 5-minute Apgar scores with electronic fetal monitoring, suggesting that electronic fetal monitoring may provide better information about neonatal well-being than does periodic auscultation. Improved information, as measured by clinical predictions, is probably highly valued by patients and clinicians and may be an important determinant of acceptance of this diagnostic technology.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

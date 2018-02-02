@@ -1,0 +1,19 @@
+
+
+	
+	Occupational and non-occupational risk factors in relation to an excess of primary liver cancer observed among residents of Brooklyn, New York.
+	
+	The incidence and mortality rates of primary liver cancer (PLC) among residents of Brooklyn, New York, were studied for 1976 through 1983. Standardized race and sex-specific incidence and mortality rates and rate ratios were computed and compared with overall US rates as reported by the Surveillance, Epidemiology, and End Results (SEER) program. The results indicate a significant excess of PLC among all race and sex groupings. A comparison of the degree of agreement between incidence and mortality data for Brooklyn residents showed excellent agreement among male patients with PLC and adequate agreement among female patients with PLC. Next, the effect of occupation on PLC mortality among Brooklyn residents was assessed. Specific occupations found to be at excess risk for PLC are private household workers (ratio of observed to expected cases [O/E] = 4.34; P less than 0.0001), non-domestic cleaning and food and beverage service workers (O/E = 2.59; P less than 0.0001), protective service workers (O/E = 1.78; P = 0.035), and transport equipment operatives (O/E = 1.52; P = 0.027). Since the distribution of Brooklyn workers employed in these occupations was found to be similar to the distribution of all US workers employed in these occupations, it is unlikely that these occupational risk factors can explain the observed excess of PLC among Brooklyn residents. The effects of non-occupational risk factors for PLC were then assessed using multiple regression analysis. The only non-occupational risk factor found to be associated with PLC among Brooklyn residents was cirrhosis of the liver (P = 0.0072). It is interesting that of the four occupations found to be at excess risk for PLC in this study, three have been previously shown to be at excess risk for cirrhosis mortality. Moreover, Brooklyn residents have cirrhosis mortality rates that are approximately two times higher than US rates. These facts, coupled with the findings of this study, support the hypothesis that the excess of PLC observed among Brooklyn residents might be related to an excess of cirrhosis of the liver in the same population, and thus provide support for an etiologic role of cirrhosis in the pathogenesis of PLC.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

@@ -1,0 +1,16 @@
+
+
+	
+	ClinQuery: a system for online searching of data in a teaching hospital.
+	
+	We designed a user-friendly computer program that permits physicians to search the clinical database of Boston's Beth Israel Hospital by clinical and demographic descriptors. For example, the user can identify all admissions in which diabetic ketoacidosis was diagnosed, the serum bicarbonate level was under 12 mmol/L, and the length of stay exceeded 7 days. Once particular admissions are identified, all data stored in the computerized record can be displayed. Authorized persons can also request the patient's complete medical record for further study. Over a 30-month period, 530 doctors, nurses, medical students, and administrators used the program to search the hospital's clinical database 1786 times. They displayed detailed information on 30,851 patients and requested the complete medical record 5319 times. In 1389 of the 1786 searches completed, the searcher responded to a computer-based questionnaire about motivation for the search. Responses indicated that 32% of the searches were for clinical research, 17% for patient care, 17% for teaching and education, 11% for hospital administration, and 12% for general exploration. In 58% of the searches, respondents indicated definite or probable success in finding the desired information. We conclude that physicians and allied personnel will repeatedly obtain, view, and analyze aggregate clinical information if they are provided with appropriate tools. We believe that such access to clinical information is an important resource for patient care, teaching, and clinical research.
+	
+		
+		
+		
+		
+		
+		
+	
+
+

@@ -1,0 +1,23 @@
+
+
+	
+	Diagnosis of breast calcifications: comparison of contact, magnified, and television-enhanced images.
+	
+	Matched contact and microfocal-spot-magnified images of 31 breasts, each containing a cluster of microcalcifications within a biopsy-proved benign (n = 21) or malignant (n = 10) lesion, were evaluated. Each matched set consisted of one image magnified 1.5 or 2.0 times by a microfocal spot; one contact film-screen mammogram; and one television-digitized, enhanced, and optically magnified contact film-screen mammogram. Three experienced mammographers and three senior diagnostic radiology residents with 2 weeks of training in mammography interpreted the calcifications. The average area under the receiver-operating-characteristic curve for the experienced mammographers was 0.60 for contact radiographs, 0.61 for the television-digitized images, and 0.69 for the microfocal-spot-magnified radiographs. The less experienced senior residents scored below a random choice, 0.44, for the television-digitized images; 0.51 for contact radiographs; and 0.69 for the microfocal-spot-magnified radiographs. We conclude that when evaluating microcalcifications, radiologists without extensive experience in mammography should not substitute television-digitized and enhanced contact mammograms for microfocal-spot-magnified mammograms; rigorous clinical evaluation is needed before this system is accepted for clinical use.
+	
+		<Category>
+Analysis of Variance</Category>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

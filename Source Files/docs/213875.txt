@@ -1,0 +1,20 @@
+
+
+	
+	Pulmonary responses to phospholipase A2 in the perfused guinea pig lung.
+	
+	We examined the effect of phospholipase A2 (PLA2; Naja naja) challenge on pulmonary hemodynamics, airway constriction, and fluid filtration in isolated Ringer-perfused guinea pig lungs. Intratracheal PLA2 (10-100 U) produced dose-dependent increases in pulmonary arterial pressure, intratracheal pressure, and lung weight, although intravenous PLA2 administration had no effect on monitored variables. Morphological features indicative of airway constriction and pulmonary edema were observed by light microscopy. PLA2-induced increases in intratracheal pressure and/or lung weight were attenuated to varying degrees by pretreatment with indomethacin (1 microM, a cyclooxygenase inhibitor), ICI-198,615 (1 microM, a leukotriene D4 receptor antagonist), and WEB 2086 (1 microM, a platelet-activating factor antagonist). PLA2-induced increases in pulmonary arterial pressure and intratracheal pressure were also reduced in lungs removed from animals pretreated with dexamethasone (50 mg/kg ip for 2 days; a steroidal antiinflammatory agent). Pyrilamine (1 microM, a histamine1-receptor antagonist) and Takeda AA861 (1 microM, a delta 5-lipoxygenase inhibitor) did not produce significant inhibitory effects on PLA2-induced pathophysiological changes. Intratracheal instillation of high-dose platelet-activating factor (50 micrograms) or lysophosphatidylcholine (100 micrograms) produced gradual increases in intratracheal pressure and lung weight, but these changes were not as large as those induced by PLA2. Thus these studies suggest that resident cell populations associated with airways may play an important role in PLA2-induced pathophysiological changes in the perfused guinea pig lung. These PLA2-induced effects are most likely partially mediated by generation of eicosanoids and platelet-activating factor.
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+

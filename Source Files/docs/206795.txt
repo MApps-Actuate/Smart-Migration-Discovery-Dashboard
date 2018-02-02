@@ -1,0 +1,17 @@
+
+
+	
+	Computerized patient scheduling in outpatient residency practices.
+	
+	A computerized appointment system is described that accommodates the special needs unique to residency training programs. Appointments are scheduled automatically according to the type of problem with which the patient presents to the office as well as the differing time requirements of faculty physicians and residents at various levels of training. The system provides for the easy and flexible scheduling of residents and the automation of appointment reminders.
+	
+		
+		
+		
+		
+		
+		
+		
+	
+
+
