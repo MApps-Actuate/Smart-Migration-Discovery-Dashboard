@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
     <property name="units">in</property>
     <property name="theme">ThemesSmartMigration.Celestial</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -24,7 +24,7 @@ this.getViewer().setUIOptions(opts);]]></method>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">/Applications/Smart Migration Discovery Dashboard/Source Files/docs/200408.txt</value>
+                <value type="constant">/Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/200408.txt</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>

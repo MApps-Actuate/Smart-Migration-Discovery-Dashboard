@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
     <list-property name="userProperties">
         <structure>
             <property name="name">8.MIME_Types_Summary.x</property>
@@ -2823,7 +2823,7 @@
                             <structure>
                                 <property name="paramName">pDocName</property>
                                 <simple-property-list name="expression">
-                                    <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                    <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                 </simple-property-list>
                             </structure>
                         </list-property>
@@ -3661,7 +3661,7 @@
                             <structure>
                                 <property name="paramName">pDocName</property>
                                 <simple-property-list name="expression">
-                                    <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                    <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                 </simple-property-list>
                             </structure>
                         </list-property>
@@ -4057,7 +4057,7 @@
                                     <structure>
                                         <property name="paramName">pDocName</property>
                                         <simple-property-list name="expression">
-                                            <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                            <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                         </simple-property-list>
                                     </structure>
                                 </list-property>
