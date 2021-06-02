@@ -14,8 +14,8 @@
 		actuate.initialize( '/iportal/', reqOps, null, null, myInit);
 		
 		function myInit(paramValues){
-			var w = $(window).width()-1;
-	    	var h = $(window).height()-70;
+			var w = $(window).width()-10;
+	    	var h = $(window).height()-85;
 			viewer = new actuate.Dashboard( 'acContainer1' );
 			viewer.setDashboardName("/Applications/Smart-Migration-Discovery-Dashboard/Dashboards/Smart Migration Discovery Dashboard.dashboard");	
 			viewer.setSize(w, h);

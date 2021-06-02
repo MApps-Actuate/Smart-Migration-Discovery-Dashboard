@@ -1,5 +1,5 @@
-PublishLocation=/Applications/Smart-Migration-Discovery-Dashboard/Report Designs/
+PublishLocation=/Applications/Smart-Migration-Discovery-Dashboard/
 eclipse.preferences.version=1
 publishFilesCheckBox=true
-publishReportPreserveFolderStructure=false
+publishReportPreserveFolderStructure=true
 publishResourcesCheckBox=false
