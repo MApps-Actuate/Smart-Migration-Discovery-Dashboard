@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202101151752</property>
     <property name="units">in</property>
-    <property name="theme">ThemesSmartMigration.Celestial</property>
+    <property name="theme">ThemesSmartMigration.OT Analytics</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -13,9 +13,9 @@
             <property name="namespace">ThemesSmartMigration</property>
         </structure>
     </list-property>
-    <method name="onContentUpdate"><![CDATA[var opts = new actuate.viewer.UIOptions();
-opts.enableToolBar(false);
-this.getViewer().setUIOptions(opts);]]></method>
+    <method name="onContentUpdate"><![CDATA[var uiopts = new actuate.viewer.UIOptions();
+uiopts.enableToolBar(false);
+this.getViewer().setUIOptions(uiopts);]]></method>
     <parameters>
         <scalar-parameter name="pDocName" id="4">
             <property name="hidden">false</property>
@@ -24,7 +24,7 @@ this.getViewer().setUIOptions(opts);]]></method>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">/Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/200408.txt</value>
+                <value type="constant">/Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/202515.txt</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -37,7 +37,6 @@ this.getViewer().setUIOptions(opts);]]></method>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
             <property name="orientation">auto</property>
-            <property name="backgroundColor">#2D2D2D</property>
             <page-footer>
                 <text id="3">
                     <property name="contentType">html</property>
@@ -49,11 +48,11 @@ this.getViewer().setUIOptions(opts);]]></method>
     <body>
         <text id="8">
             <property name="fontFamily">"Lato"</property>
-            <property name="color">#FFBD00</property>
+            <property name="color">#777777</property>
             <property name="display">block</property>
             <property name="contentType">html</property>
             <text-property name="content"><![CDATA[
-<form id="DocView" method="post" action="http://ot-election-otca.eastus.cloudapp.azure.com/otcademo/index.php?op=Analyze%20Text&amp;configuration=lifescience">
+<form name="DocView" id="DocView" method="post" action="http://ot-election-otca.eastus.cloudapp.azure.com/otcademo/index.php?op=Analyze%20Text&amp;configuration=lifescience">
 <div style="padding:25px">
 	<table>
 		<tbody>
@@ -69,18 +68,17 @@ this.getViewer().setUIOptions(opts);]]></method>
 	<input type="hidden" name="text_to_analyze" id="analyze">
 </div>
 </form>
-
-<script>
-	$('[id*="status1"').hide();
-	$('[id*="status2"').hide();
-	$('[id*="status3"').hide();
-	$('[id*="status4"').hide();
+<script type="text/javascript">
+	$('[id*=status1]').hide();
+	$('[id*=status2]').hide();
+	$('[id*=status3]').hide();
+	$('[id*=status4]').hide();
 	
 	var rpt = "<VALUE-OF>params["pDocName"].value</VALUE-OF>";
 	var rptExt = rpt.split('.').pop().toLowerCase();
 	var rptName = rpt.replace(/^.*[\\\/]/, '');
-	
-	$(".reporttitle_text")[0].innerHTML = rptName;
+
+//	$(".reporttitle_text")[0].innerHTML = rptName;
 	document.getElementById("heading1").innerHTML = "<h3>Processing " + rptName + "</h3>";
 	
 	document.getElementById("viewer1").innerHTML = "<iframe id='txtFrame' width='700px' height='600px' src='/iportal/servlet/DownloadFile/" + rptName + "?name=" +  encodeURIComponent(rpt) + "&amp;fileExtension=" + rptExt + "&amp;__vp=Default%20Volume&amp;volume=Default%20Volume&amp;showBanner=false' /iframe>";
@@ -130,7 +128,7 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <label id="25">
                         <property name="fontFamily">"Lato"</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#FFBD00</property>
+                        <property name="color">#777777</property>
                         <property name="display">block</property>
                         <expression name="bookmark" type="javascript">"status1"</expression>
                         <text-property name="text">Identifying Language</text-property>
@@ -140,35 +138,35 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <text id="5">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress1_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress1_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#221E6F;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="45">
                     <text id="60">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress1_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress1_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#36327C;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="61">
                     <text id="62">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress1_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress1_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#4A4689;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="63">
                     <text id="64">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress1_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress1_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#5E5B96;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="65">
                     <text id="66">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress1_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress1_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#726FA3;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
             </row>
@@ -181,7 +179,7 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <label id="26">
                         <property name="fontFamily">"Lato"</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#FFBD00</property>
+                        <property name="color">#777777</property>
                         <expression name="bookmark" type="javascript">"status2"</expression>
                         <text-property name="text">Determining Content Type</text-property>
                     </label>
@@ -190,35 +188,35 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <text id="732">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress2_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress2_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#4F3690;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="733">
                     <text id="735">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress2_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress2_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#5F489A;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="736">
                     <text id="738">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress2_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress2_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#6F5AA4;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="739">
                     <text id="741">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress2_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress2_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#7F6CAE;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="742">
                     <text id="744">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress2_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress2_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#8F7FB8;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
             </row>
@@ -231,7 +229,7 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <label id="27">
                         <property name="fontFamily">"Lato"</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#FFBD00</property>
+                        <property name="color">#777777</property>
                         <expression name="bookmark" type="javascript">"status3"</expression>
                         <text-property name="text">Extracting Concepts and Terms</text-property>
                     </label>
@@ -240,35 +238,35 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <text id="746">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress3_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress3_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#6D65FF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="747">
                     <text id="748">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress3_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress3_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#7A73FF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="749">
                     <text id="750">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress3_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress3_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#8781FF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="751">
                     <text id="752">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress3_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress3_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#948FFF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="753">
                     <text id="754">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress3_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress3_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#A29DFF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
             </row>
@@ -281,7 +279,7 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <label id="32">
                         <property name="fontFamily">"Lato"</property>
                         <property name="fontWeight">bold</property>
-                        <property name="color">#FFBD00</property>
+                        <property name="color">#777777</property>
                         <expression name="bookmark" type="javascript">"status4"</expression>
                         <text-property name="text">Analyzing Sentiment and Subjectivity</text-property>
                     </label>
@@ -290,35 +288,35 @@ this.getViewer().setUIOptions(opts);]]></method>
                     <text id="734">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress4_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#977100;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress4_1" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#54ABB5;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="758">
                     <text id="737">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress4_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#B18400;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress4_2" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#63B2BB;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="759">
                     <text id="740">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress4_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#CB9700;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress4_3" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#73BAC2;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="760">
                     <text id="743">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress4_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#E5AA00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress4_4" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#82C1C9;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
                 <cell id="761">
                     <text id="762">
                         <property name="display">block</property>
                         <property name="contentType">html</property>
-                        <text-property name="content"><![CDATA[<div id="progress4_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#FFBD00;display:none;">&amp;nbsp;</div>]]></text-property>
+                        <text-property name="content"><![CDATA[<div id="progress4_5" style="width:15px;height:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#92C9CF;display:none;">&amp;nbsp;</div>]]></text-property>
                     </text>
                 </cell>
             </row>
@@ -326,8 +324,8 @@ this.getViewer().setUIOptions(opts);]]></method>
         <text id="731">
             <property name="display">none</property>
             <property name="contentType">html</property>
-            <text-property name="content"><![CDATA[<script>
-$('[id*="status1"]').fadeIn("fast");
+            <text-property name="content"><![CDATA[<script type="text/javascript">
+$('[id*=status1]').fadeIn("fast");
 	$('#progress1_1').fadeIn("fast", function() {
 		$('#progress1_2').fadeIn("fast", function() {
 			$('#progress1_3').fadeIn("fast", function () {
@@ -341,7 +339,7 @@ $('[id*="status1"]').fadeIn("fast");
 	});
 
 setTimeout(function() {
-$('[id*="status2"]').fadeIn("fast");
+$('[id*=status2]').fadeIn("fast");
 	$('#progress2_1').fadeIn("fast", function() {
 		$('#progress2_2').fadeIn("fast", function() {
 			$('#progress2_3').fadeIn("fast", function () {
@@ -356,7 +354,7 @@ $('[id*="status2"]').fadeIn("fast");
 }, 1000);
 
 setTimeout(function() {
-$('[id*="status3"]').fadeIn("fast");
+$('[id*=status3]').fadeIn("fast");
 	$('#progress3_1').fadeIn("fast", function() {
 		$('#progress3_2').fadeIn("fast", function() {
 			$('#progress3_3').fadeIn("fast", function () {
@@ -371,7 +369,7 @@ $('[id*="status3"]').fadeIn("fast");
 }, 2000);
 
 setTimeout(function() {
-$('[id*="status4"]').fadeIn("fast");
+$('[id*=status4]').fadeIn("fast");
 	$('#progress4_1').fadeIn("fast", function() {
 		$('#progress4_2').fadeIn("fast", function() {
 			$('#progress4_3').fadeIn("fast", function () {
@@ -386,7 +384,7 @@ $('[id*="status4"]').fadeIn("fast");
 }, 3000);
 
 setTimeout(function() {
-$('[id*="status5"]').fadeIn("fast");
+$('[id*=status5]').fadeIn("fast");
 	$('#progress5_1').fadeIn("fast", function() {
 		$('#progress5_2').fadeIn("fast", function() {
 			$('#progress5_3').fadeIn("fast", function () {

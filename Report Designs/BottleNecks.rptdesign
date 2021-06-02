@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="351">
+            <property name="datamartURL">Data Objects/SMDD Data Object</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Data Set" id="352">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Document clusters</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Document clusters</text-property>
+                    <text-property name="heading">Document clusters</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Bottle Neck size</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Bottle Neck size</text-property>
+                    <text-property name="heading">Bottle Neck size</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Bottle Neck size (in MB)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Bottle Neck size (in MB)</text-property>
+                    <text-property name="heading">Bottle Neck size (in MB)</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Document clusters</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Bottle Neck size</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Bottle Neck size (in MB)</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Bottle Neck</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Document clusters</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Bottle Neck size</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Bottle Neck size (in MB)</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="HTMLControl" id="350">
+            <method name="clientOnCreate"><![CDATA[// This example demonstrates how to create a calendar chart using Google Chart JSAPI
+
+/* ----------------------------------------------------------------------------------------- */
+/* This is the configuration object for creating the chart. You modify it to map your own data.
+ * See inline comments for more details.
+ */
+
+var config = {
+
+	/*
+	 * Provide the column binding names as shown below. If not all
+	 * column names are specified, the template will use the sample data instead.
+	 */
+
+	/* Specify the column name as it appears in the data set.
+	* Example: 
+	* numberColumn : "PRODUCTLINE"
+	*/
+
+	/* the column name in Numeric format */
+	textColumn : "Document clusters",
+	/* the column name for the date value in Date format */
+	numberColumn : "Bottle Neck size (in MB)",
+	column1 : "column1",
+	column3 : "column3"
+};
+
+/* --------------------------------------------------------------------------------------- */
+/*
+ * Below is the implementation code for the example. In most cases you do not need to
+ * modify it, unless you want to change the chart style, or behavior. 
+ * Changing the config object above is sufficient. 
+ */
+ 
+
+var customViz = this;
+var containerId = this.getId();
+customViz.setPrintTimeOut(3000);
+
+// if use data binding , the data should be saved and transformed in order
+// to fit for the calender map.
+function dataTransfrom(cursor) {
+	var rows = [];
+var row1 = [];
+		row1.push(String('All Content'));
+		row1.push(null);
+		row1.push(0);
+		row1.push(0);
+		rows.push(row1);
+	while (cursor.hasNext()) {
+		var rowData = cursor.next();
+		var row = [];
+		row.push(String(rowData[config.textColumn] + ': ' + rowData[config.numberColumn]));
+		row.push('All Content');
+		row.push(Number(rowData[config.numberColumn]));
+		row.push(Number(rowData[config.column3]));
+		rows.push(row);
+	}
+	return rows;
+}
+
+function drawStuff() {
+	var dataTable = new google.visualization.DataTable();
+
+	dataTable.addColumn({
+		type : 'string',
+		id : config.column1
+	});
+	dataTable.addColumn({
+		type : 'string',
+		id : config.textColumn
+	});
+	dataTable.addColumn({
+		type : 'number',
+		id : config.numberColumn
+	});
+	dataTable.addColumn({
+		type : 'number',
+		id : config.column3
+	});
+
+		// This is the data from binding.
+		dataTable.addRows(dataTransfrom(customViz.getDataCursor()));
+		
+    var containerWidth = $("#" + containerId).width();
+    var cellSize = containerWidth / 65;
+    var containerHeight = Math.max($("#" + containerId).height(),cellSize);
+
+	var chart = new google.visualization.TreeMap(document
+			.getElementById(customViz.getId()));
+
+	 var options = {
+        title: "",
+        height: containerHeight,
+        width: containerWidth,
+        minColor: '#F59D4C',
+		midColor: '#54ABB5',
+		maxColor: '#6D65FF',
+		headerHeight: 0,
+		fontFamily: 'Lato',
+		fontSize:	'14',
+		fontColor: '#464646',
+		showTooltips: false,
+		//generateTooltip: toolTip,
+    	showScale: false
+    };
+
+	chart.draw(dataTable, options);
+	//add ready event and its handler
+	google.visualization.events.addListener(chart, 'ready', function(){
+		customViz.setDelegate(chart);
+		customViz.setPrintReady();
+	});
+	
+	function toolTip (row, size, value) {
+   		return '<div style="background:#fd9; padding:10px; border-style:solid">' +
+           dataTable.getValue(row,0) + ": " + dataTable.getValue(row,2) + '</div>';
+
+	}
+}
+
+
+// For google jsapi , need to use dynamic loading.
+$.ajax({
+	url : 'http://www.google.com/jsapi',
+	dataType : 'script',
+	cache : true,
+	success : function() {
+		// After successfully load google jsapi , we need to load visualization.
+		google.load('visualization', '1', {
+			'packages' : [ 'treemap' ],
+			'callback' : drawStuff
+		});
+	}
+});
+]]></method>
+            <property name="height">240px</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Document clusters</property>
+                    <text-property name="displayName">Document clusters</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Document clusters"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">column1</property>
+                    <expression name="expression" type="javascript">row.__rownum</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Bottle Neck size (in MB)</property>
+                    <text-property name="displayName">Bottle Neck size (in MB)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Bottle Neck size (in MB)"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">column3</property>
+                    <expression name="expression" type="javascript">row.__rownum</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="displayName">Calendar Chart from Google Charts</property>
+        </extended-item>
+    </body>
+</report>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="units">in</property>
+    <method name="beforeFactory"><![CDATA[if(params["pCustodian"].value != null){
+       paramObj1 = {};
+       for(var x=0; x<params["pCustodian"].value.length; x++){
+              paramObj1[params["pCustodian"].value[x]] = params["pCustodian"].displayText[x];
+       }
+}
+
+if(params["pClassification"].value != null){
+       paramObj2 = {};
+       for(var x=0; x<params["pClassification"].value.length; x++){
+              paramObj2[params["pClassification"].value[x]] = params["pClassification"].displayText[x];
+       }
+}
+
+if(params["pCategory"].value != null){
+       paramObj3 = {};
+       for(var x=0; x<params["pCategory"].value.length; x++){
+              paramObj3[params["pCategory"].value[x]] = params["pCategory"].displayText[x];
+       }
+}]]></method>
+    <property name="theme">ThemesSmartMigration.OT Analytics</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesSmartMigration.rptlibrary</property>
+            <property name="namespace">ThemesSmartMigration</property>
+        </structure>
+    </list-property>
+    <method name="onContentUpdate"><![CDATA[// Get the Viewer's current UI Options
+var uiOptions = this.getViewer().getUIOptions();
+
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
+
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
+
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();
+	
+bviewer = this.getViewer();
+//if ((window["__firstView"] === undefined)||(window["__firstView"]==false)) {
+//	window["__firstView"] = true;
+//    setTimeout(function(){
+//      	bviewer.submit();
+ //     }, 1000);
+//}]]></method>
+    <parameters>
+        <scalar-parameter name="pCustodian" id="489">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pClassification" id="490">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pCategory" id="491">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="4">
+            <property name="datamartURL">Data Objects/SMDD Data Object</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Medical Data Model" id="5">
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Medical Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="376">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__ac_group_collapse_level</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__ac_group_collapse_level">2,1</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">avoid</property>
+            <property name="pageBreakInside">avoid</property>
+            <property name="theme">ThemesSmartMigration.Table-OT Analytics</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">DocumentId</property>
+                    <text-property name="displayName">DocumentId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DocumentId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CartridgeID</property>
+                    <text-property name="displayName">CartridgeID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CartridgeID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ConfidenceScore</property>
+                    <text-property name="displayName">ConfidenceScore</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ConfidenceScore"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Frequency</property>
+                    <text-property name="displayName">Frequency</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Frequency"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MainTerm</property>
+                    <text-property name="displayName">MainTerm</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MainTerm"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KBid</property>
+                    <text-property name="displayName">KBid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KBid"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Category</property>
+                    <text-property name="displayName">Category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Weight</property>
+                    <text-property name="displayName">Weight</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Weight"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Document</property>
+                    <text-property name="displayName">Document</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Document"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Custodian</property>
+                    <text-property name="displayName">Custodian</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Custodian"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">"tblClassification"</expression>
+            <property name="linkedDataModel">Medical Data Model</property>
+            <property name="pageBreakInterval">0</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">if(params["pCustodian"].value == null)&#13;
+            true;&#13;
+else {&#13;
+            if(paramObj1.hasOwnProperty(row["Custodian"]))&#13;
+                        true;&#13;
+            else&#13;
+                        false;&#13;
+}</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">if(params["pClassification"].value == null)&#13;
+            true;&#13;
+else {&#13;
+            if(paramObj2.hasOwnProperty(row["CartridgeID"]))&#13;
+                        true;&#13;
+            else&#13;
+                        false;&#13;
+}</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">if(params["pCategory"].value == null)&#13;
+            true;&#13;
+else {&#13;
+            if(paramObj3.hasOwnProperty(row["Category"]))&#13;
+                        true;&#13;
+            else&#13;
+                        false;&#13;
+}</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="443">
+                <property name="width">20%</property>
+            </column>
+            <column id="430">
+                <property name="width">20%</property>
+            </column>
+            <column id="431">
+                <property name="width">10%</property>
+            </column>
+            <column id="436">
+                <property name="width">30%</property>
+            </column>
+            <column id="439">
+                <property name="width">20%</property>
+            </column>
+            <header>
+                <row id="377">
+                    <property name="fontWeight">normal</property>
+                    <cell id="440">
+                        <label id="397">
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Custodian</text-property>
+                        </label>
+                    </cell>
+                    <cell id="378">
+                        <label id="395">
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Document</text-property>
+                        </label>
+                    </cell>
+                    <cell id="380">
+                        <label id="381">
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Classification</text-property>
+                        </label>
+                    </cell>
+                    <cell id="390">
+                        <label id="391">
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Category</text-property>
+                        </label>
+                    </cell>
+                    <cell id="396">
+                        <label id="387">
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">3pt</property>
+                            <property name="paddingLeft">3pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Main Term</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="444">
+                <property name="groupName">grpCustodian</property>
+                <expression name="keyExpr" type="javascript">row["Custodian"]+row["DocumentId"]</expression>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">avoid</property>
+                <property name="pageBreakBefore">avoid</property>
+                <property name="pageBreakInside">avoid</property>
+                <header>
+                    <row id="445">
+                        <method name="onPrepare"><![CDATA[cust="";
+clas="";]]></method>
+                        <cell id="446">
+                            <property name="paddingTop">2pt</property>
+                            <property name="paddingBottom">2pt</property>
+                            <data id="457">
+                                <property name="paddingLeft">5pt</property>
+                                <property name="resultSetColumn">Custodian</property>
+                            </data>
+                        </cell>
+                        <cell id="447">
+                            <property name="paddingTop">2pt</property>
+                            <property name="paddingBottom">2pt</property>
+                            <data id="471">
+                                <property name="paddingLeft">5pt</property>
+                                <property name="resultSetColumn">DocumentId</property>
+                                <list-property name="action">
+                                    <structure>
+                                        <property name="linkType">drill-through</property>
+                                        <property name="toolTip">Click to view source document</property>
+                                        <property name="reportName">ViewDoc.rptdesign</property>
+                                        <property name="targetWindow">_blank</property>
+                                        <property name="targetFileType">report-design</property>
+                                        <list-property name="paramBindings">
+                                            <structure>
+                                                <property name="paramName">pDocName</property>
+                                                <simple-property-list name="expression">
+                                                    <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                    </structure>
+                                </list-property>
+                            </data>
+                        </cell>
+                        <cell id="448">
+                            <property name="paddingTop">2pt</property>
+                            <property name="paddingBottom">2pt</property>
+                            <text id="505">
+                                <property name="fontWeight">normal</property>
+                                <property name="fontStyle">normal</property>
+                                <property name="paddingLeft">5pt</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<div id="_clas_<VALUE-OF>row["Custodian"]+row["DocumentId"]</VALUE-OF>" style='width:max-content; overflow:hidden; float:left; text-overflow:ellipsis;'></div>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="449">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="paddingTop">2pt</property>
+                            <property name="paddingBottom">2pt</property>
+                            <data id="412">
+                                <property name="paddingLeft">5pt</property>
+                                <expression name="bookmark" type="javascript">"tbl"+row["Category"]+ new Date().getTime() + String.fromCharCode(97 + Math.floor(Math.random() * 26));</expression>
+                                <property name="resultSetColumn">Category</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="451">
+                        <cell id="452"/>
+                        <cell id="453"/>
+                        <cell id="454">
+                            <text id="504">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<script>
+	var list = "<VALUE-OF>clas</VALUE-OF>";
+	var arr = list.split(",");
+	$.each(arr, function(index, item) {
+		$('[id*="_clas_<VALUE-OF>row["Custodian"]+row["DocumentId"]</VALUE-OF>"]').append("<div id='_tbl" + item + "_<VALUE-OF>new Date().getMilliseconds() + String.fromCharCode(97 + Math.floor(Math.random() * 26))</VALUE-OF>' style='float:left;padding-right:10px;'> " + item + " </div>");
+		$('[id*="_tbl' + item + '"]').css({'color': localStorage.getItem(item)});
+	});
+</script>
+]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="455"/>
+                        <cell id="456"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="458">
+                <property name="groupName">grpDoc</property>
+                <expression name="keyExpr" type="javascript">row["DocumentId"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["DocumentId"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">avoid</property>
+                <property name="pageBreakBefore">avoid</property>
+                <property name="pageBreakInside">avoid</property>
+                <header>
+                    <row id="459">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="460"/>
+                        <cell id="461"/>
+                        <cell id="462"/>
+                        <cell id="463"/>
+                        <cell id="464"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="465">
+                        <cell id="466"/>
+                        <cell id="467"/>
+                        <cell id="468"/>
+                        <cell id="469"/>
+                        <cell id="470"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="472">
+                <property name="groupName">grpClassification</property>
+                <expression name="keyExpr" type="javascript">row["CartridgeID"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["CartridgeID"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">avoid</property>
+                <property name="pageBreakBefore">avoid</property>
+                <property name="pageBreakInside">avoid</property>
+                <header>
+                    <row id="473">
+                        <method name="onCreate"><![CDATA[vars["grpCnt"]+=1;]]></method>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="474"/>
+                        <cell id="475"/>
+                        <cell id="476"/>
+                        <cell id="477"/>
+                        <cell id="478"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="479">
+                        <cell id="480"/>
+                        <cell id="481"/>
+                        <cell id="482">
+                            <text-data id="502">
+                                <property name="fontWeight">bold</property>
+                                <property name="fontStyle">italic</property>
+                                <expression name="valueExpr">if (cust == row["Custodian"]+row["DocumentId"]) {&#13;
+		if ((clas.indexOf(row["CartridgeID"]) == -1)) {&#13;
+			if (this.text =="") {&#13;
+				//this.text = row["CartridgeID"];&#13;
+				clas = row["CartridgeID"];&#13;
+			}&#13;
+			else {&#13;
+				//this.text += ", " + row["CartridgeID"];&#13;
+				clas += "," + row["CartridgeID"];&#13;
+			}&#13;
+		}&#13;
+&#13;
+}&#13;
+else {&#13;
+	cust = row["Custodian"]+row["DocumentId"];&#13;
+	//this.text = row["CartridgeID"];&#13;
+	clas = row["CartridgeID"];&#13;
+}&#13;
+"";</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="483"/>
+                        <cell id="484"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="398">
+                    <property name="backgroundColor">#EEEEEE</property>
+                    <cell id="441">
+                        <property name="paddingTop">2pt</property>
+                        <property name="paddingBottom">2pt</property>
+                    </cell>
+                    <cell id="399">
+                        <property name="paddingTop">2pt</property>
+                        <property name="paddingBottom">2pt</property>
+                    </cell>
+                    <cell id="401">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="paddingTop">2pt</property>
+                        <property name="paddingBottom">2pt</property>
+                        <data id="494">
+                            <property name="marginLeft">0pt</property>
+                            <property name="paddingLeft">10pt</property>
+                            <expression name="bookmark" type="javascript">"tbl"+row["CartridgeID"]+vars["grpCnt"]+"_"+new Date().getTime() + String.fromCharCode(97 + Math.floor(Math.random() * 26))</expression>
+                            <property name="resultSetColumn">CartridgeID</property>
+                        </data>
+                    </cell>
+                    <cell id="417">
+                        <property name="paddingTop">2pt</property>
+                        <property name="paddingBottom">2pt</property>
+                        <data id="408">
+                            <property name="paddingLeft">5pt</property>
+                            <expression name="bookmark" type="javascript">"tbl"+row["MainTerm"]+ new Date().getTime() + String.fromCharCode(97 + Math.floor(Math.random() * 26));</expression>
+                            <property name="resultSetColumn">MainTerm</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="419">
+                    <cell id="442"/>
+                    <cell id="420"/>
+                    <cell id="421"/>
+                    <cell id="426"/>
+                    <cell id="429"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="grpCnt">
+            <expression name="value" type="javascript">0</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

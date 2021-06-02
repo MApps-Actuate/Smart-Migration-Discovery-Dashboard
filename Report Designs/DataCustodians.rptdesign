@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202101151752</property>
     <property name="units">in</property>
     <property name="theme">ThemesSmartMigration.Ultra Violet</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -151,13 +151,13 @@ var chartConfig = {
 	chart : {
 		type : 'heatmap',
 		marginTop : 10,
-		marginBottom : 20,
+		marginBottom : 25,
 		style : {
 			color : '#938f9c',
 			fontFamily : 'Lato',
 			fontSize : '8px'
 		},
-		backgroundColor	:	'#2D2D2D'
+		backgroundColor	:	'#fff0'
 	},
 
 	title : {
@@ -179,7 +179,7 @@ var chartConfig = {
 				'Maria', 'Leon', 'Anna', 'Tim', 'Laura' ],
       labels: {
          style: {
-            color: '#999999'
+            color: '#000000'
          }
       },
 	},
@@ -189,7 +189,7 @@ var chartConfig = {
 		title : null,
       labels: {
          style: {
-            color: '#999999'
+            color: '#000000'
          }
       },
 	},
@@ -392,13 +392,12 @@ function isFloat(n) {
 
 var callback = function() {
 
-	var heatmapChart = $('#' + customViz.getId()).highcharts(chartConfig);
+	var heatmapChart = Highcharts.chart(customViz.getId(),chartConfig);
 	customViz.setDelegate(heatmapChart);
 	customViz.setPrintReady();
 }
 
-head.load('http://code.highcharts.com/highcharts.js',
-		'http://code.highcharts.com/modules/heatmap.js', callback);
+require([this.getBirtResourceURL('js/html5charts/html5chartInternal.js')] , callback);
 ]]></method>
             <list-property name="sort">
                 <structure>

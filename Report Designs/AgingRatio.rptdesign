@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
     <property name="units">in</property>
     <property name="theme">ThemesSmartMigration.Celestial</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -13,7 +13,7 @@
             <property name="namespace">ThemesSmartMigration</property>
         </structure>
     </list-property>
-    <method name="onContentUpdate"><![CDATA[debugger;
+    <method name="onContentUpdate"><![CDATA[
 var reportWidth = this.getViewer().getWidth();
 
 var chart = this.getViewer().getChart();
@@ -149,7 +149,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
     <body>
         <extended-item extensionName="Chart" id="9">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+ <ChartWithAxes version="2.6.1" type="Difference Chart" subType="Standard Difference Chart">
   <block>
    <children _type="TitleBlock" visible="false">
     <outline>
@@ -201,9 +201,11 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="/**&#13;&#10; * Called before series instance is rendered.&#13;&#10; *&#13;&#10; * @param series&#13;&#10; *            series instance&#13;&#10; * @param  seriesOptions&#13;&#10; *             series options&#13;&#10; * @param  chart&#13;&#10; *             chart instance&#13;&#10; * @param  seriesIndex&#13;&#10; *             series index&#13;&#10; */&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex)&#13;&#10;{&#13;&#10;    //seriesOptions.fillOpacity = 0.1&#13;&#10;},"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="42,91,62,9,21" seriesDefinitionIndex="1"/>
   </sampleData>
   <emptyMessage>
    <caption value="This chart contains no data."/>
@@ -219,16 +221,16 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes primaryAxis="true" percent="false">
+   <associatedAxes primaryAxis="true">
     <title>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
      </outline>
     </title>
-    <seriesDefinitions>
+    <seriesDefinitions zOrder="1">
      <query definition=""/>
-     <series _type="LineSeries" seriesIdentifier="Aging Ratio" stacked="false">
+     <series _type="DifferenceSeries" seriesIdentifier="Area" translucent="false" curve="true">
       <label>
        <background _nil="1"/>
        <outline>
@@ -238,18 +240,57 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
       <dataDefinition definition="row[&quot;Aging Ratio&quot;]">
        <grouping/>
       </dataDefinition>
+      <dataDefinition definition="-100">
+       <grouping/>
+      </dataDefinition>
+      <cursor type="0"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes visible="true">
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="DifferenceSeries" seriesIdentifier="Aging Ratio" translucent="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Aging Ratio&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataDefinition definition="row[&quot;Aging Ratio&quot;]">
+       <grouping/>
+      </dataDefinition>
       <triggers condition="6">
        <action type="1">
         <value _type="TooltipValue" text="" delay="200"/>
        </action>
       </triggers>
-      <curveFitting _nil="1"/>
+      <cursor type="0"/>
       <markers>
        <outline/>
       </markers>
-      <lineAttributes>
+      <lineAttributes thickness="3" visible="true">
        <color _nil="1"/>
       </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
      </series>
     </seriesDefinitions>
     <lineAttributes>
@@ -339,8 +380,8 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
             <property name="inheritColumns">true</property>
-            <property name="height">164.25pt</property>
-            <property name="width">337.5pt</property>
+            <property name="height">185pt</property>
+            <property name="width">100%</property>
             <property name="dataSet">Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -368,7 +409,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <property name="dataType">decimal</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesSmartMigration.Chart-Celestial</property>
+            <property name="theme">ThemesSmartMigration.Chart-OT Analytics</property>
         </extended-item>
     </body>
 </report>

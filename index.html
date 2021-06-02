@@ -7,25 +7,52 @@
 	<script type="text/javascript" src="/iportal/jsapi"></script>
 	
 	<script>
+		viewer = null;
 		actuate.load("dashboard");
 		var reqOps = new actuate.RequestOptions( );
 		reqOps.setRepositoryType(actuate.RequestOptions.REPOSITORY_ENCYCLOPEDIA);
 		actuate.initialize( '/iportal/', reqOps, null, null, myInit);
 		
 		function myInit(paramValues){
+			var w = $(window).width()-1;
+	    	var h = $(window).height()-70;
 			viewer = new actuate.Dashboard( 'acContainer1' );
 			viewer.setDashboardName("/Applications/Smart-Migration-Discovery-Dashboard/Dashboards/Smart Migration Discovery Dashboard.dashboard");	
-			viewer.setSize(1550,1000);
+			viewer.setSize(w, h);
 			viewer.submit();
 
-		$('head').append('<link id="myCSS" rel="stylesheet" type="text/css" href="css/blank.css">');
-		$("#myCSS").attr("href", "css/overrideActuate_black.css");
+			$('head').append('<link id="myCSS" rel="stylesheet" type="text/css" href="css/blank.css">');
+			$("#myCSS").attr("href", "css/overrideActuate_2019.css");
 		}
+		
+//		$(window).resize(function() {
+//	          var w = $(window).width()-1;
+//	          var h = $(window).height()-70;
+//	          viewer.setSize(w,h);                     
+//	          viewer.submit();              
+//		});
+
 	</script>
 </head>
 
 <body>
-<div id="banner" style="background-color:#1d1d1d; width:1550px; height:60px;" align="left"><img src="img/Smart Migration.png" height="75px" style="padding-left:20px"></div>
+<div id="banner" align="left">
+	<table id="bannerHeading" width="100%">
+		<tbody>
+			<tr style="vertical-align:middle;">
+				<td width="30%" align="left" style="white-space: nowrap;">
+					<img src="img/Home Banner.png" height="50px" style="padding-left:20px"><span style="vertical-align:super; white-space: nowrap;">Smart Migration</span>
+				</td>
+				<td width="30%" align="center">
+					<img src="img/OT Magellan.png" height="50px">
+				</td>
+				<td width="40%" align="right">
+					<img src="img/userhead.png" height="50px" style="padding-right:20px">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 <div>
 
 	<section class="acContent">

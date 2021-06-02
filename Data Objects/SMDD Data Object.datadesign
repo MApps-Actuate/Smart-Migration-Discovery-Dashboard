@@ -431,6 +431,11 @@
                     <property name="columnName">DocFSDateCreated</property>
                     <property name="analysis">dimension</property>
                     <text-property name="heading">DocFSDateCreated</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat">
+                        <property name="category">General Date</property>
+                        <property name="pattern">General Date</property>
+                    </structure>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
                 </structure>
@@ -556,10 +561,14 @@
                 <structure>
                     <property name="columnName">DocSizeMB</property>
                     <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">DocSizeGB</property>
                     <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
             </list-property>
             <structure name="cachedMetaData">
@@ -2818,12 +2827,12 @@
                         <property name="linkType">drill-through</property>
                         <property name="formatType">html</property>
                         <property name="targetFileType">report-design</property>
-                        <property name="reportName">/Report Designs/ViewDoc.rptdesign</property>
+                        <property name="reportName">^/Report Designs/ViewDoc.rptdesign</property>
                         <list-property name="paramBindings">
                             <structure>
                                 <property name="paramName">pDocName</property>
                                 <simple-property-list name="expression">
-                                    <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                    <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                 </simple-property-list>
                             </structure>
                         </list-property>
@@ -3001,7 +3010,7 @@
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "DocumentId", "CartridgeID", "ConfidenceScore", "Frequency", "MainTerm", "KBid", "Category", "Weight" from "/C:/workspace/Smart Migration Discovery Dashboard/Source Files/Metlife Data Sample.xlsx" : {"DocumentId","DocumentId",STRING;"CartridgeID","CartridgeID",STRING;"ConfidenceScore","ConfidenceScore",STRING;"Frequency","Frequency",STRING;"MainTerm","MainTerm",STRING;"KBid","KBid",STRING;"Category","Category",STRING;"Weight","Weight",STRING}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "DocumentId", "CartridgeID", "ConfidenceScore", "Frequency", "MainTerm", "KBid", "Category", "Weight" from "/C:/workspace/Smart-Migration-Discovery-Dashboard/Source Files/Metlife Data Sample.xlsx" : {"DocumentId","DocumentId",STRING;"CartridgeID","CartridgeID",STRING;"ConfidenceScore","ConfidenceScore",STRING;"Frequency","Frequency",STRING;"MainTerm","MainTerm",STRING;"KBid","KBid",STRING;"Category","Category",STRING;"Weight","Weight",STRING}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -3661,7 +3670,7 @@
                             <structure>
                                 <property name="paramName">pDocName</property>
                                 <simple-property-list name="expression">
-                                    <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                    <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                 </simple-property-list>
                             </structure>
                         </list-property>
@@ -3809,15 +3818,6 @@
                 </alias-data-set>
             </property>
             <property name="drillPaths">
-                <drill-path id="150">
-                    <text-property name="displayName">DocFSDateCreated</text-property>
-                    <simple-property-list name="drillPathColumns">
-                        <value>dataSetRow["DocFSDateCreated"]["Year"]</value>
-                        <value>dataSetRow["DocFSDateCreated"]["Month"]</value>
-                        <value>dataSetRow["DocFSDateCreated"]["DayOfMonth"]</value>
-                        <value>dataSetRow["DocFSDateCreated"]["Hour"]</value>
-                    </simple-property-list>
-                </drill-path>
                 <drill-path id="151">
                     <text-property name="displayName">DocFSDateModified</text-property>
                     <simple-property-list name="drillPathColumns">
@@ -3843,6 +3843,15 @@
                         <value>dataSetRow["DocCSDateCreated"]["Month"]</value>
                         <value>dataSetRow["DocCSDateCreated"]["DayOfMonth"]</value>
                         <value>dataSetRow["DocCSDateCreated"]["Hour"]</value>
+                    </simple-property-list>
+                </drill-path>
+                <drill-path id="331">
+                    <text-property name="displayName">DocFSDateCreated</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["DocFSDateCreated"]["Year"]</value>
+                        <value>dataSetRow["DocFSDateCreated"]["Month"]</value>
+                        <value>dataSetRow["DocFSDateCreated"]["DayOfMonth"]</value>
+                        <value>dataSetRow["DocFSDateCreated"]["Hour"]</value>
                     </simple-property-list>
                 </drill-path>
             </property>
@@ -4057,7 +4066,7 @@
                                     <structure>
                                         <property name="paramName">pDocName</property>
                                         <simple-property-list name="expression">
-                                            <value type="javascript">"Applications/Smart-Migration-Discovery-Dashboard/Source Files/docs/" + row["DocumentId"]</value>
+                                            <value type="javascript">"Applications/Smart Migration Discovery Dashboard/Source Files/docs/" + row["DocumentId"]</value>
                                         </simple-property-list>
                                     </structure>
                                 </list-property>
