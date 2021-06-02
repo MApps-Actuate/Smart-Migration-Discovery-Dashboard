@@ -2688,8 +2688,18 @@
                     <property name="name">dashboardTheme</property>
                     <property name="type">string</property>
                 </structure>
+                <structure>
+                    <property name="name">enableGlobalFilter</property>
+                    <property name="type">boolean</property>
+                </structure>
+                <structure>
+                    <property name="name">dashboardLayout</property>
+                    <property name="type">string</property>
+                </structure>
             </list-property>
             <property name="dashboardTheme">ThemesReportItems3.Classic:Light</property>
+            <property name="enableGlobalFilter">false</property>
+            <property name="dashboardLayout">smartLayout</property>
             <property name="activeTab">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
             <property name="tabs">
                 <tab-element name="180a3b33-87c3-4efd-af27-ac689d7b111c" id="3">
@@ -2698,8 +2708,13 @@
                             <property name="name">tabTheme</property>
                             <property name="type">string</property>
                         </structure>
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
                     </list-property>
                     <property name="tabTheme">ThemesReportItems3.Classic:Light</property>
+                    <property name="responsiveView">true</property>
                     <property name="title">CONTENT DESCRIPTION</property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_40587c2a-5002-4812-a88f-59a922b5e959" id="10">
