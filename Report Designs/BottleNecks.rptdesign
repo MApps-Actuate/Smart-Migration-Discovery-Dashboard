@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202101151752</property>
     <property name="units">in</property>
     <property name="theme">ThemesReportItems31.Modern</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -222,7 +222,7 @@ function drawStuff() {
 
 // For google jsapi , need to use dynamic loading.
 $.ajax({
-	url : 'http://www.google.com/jsapi',
+	url : 'https://www.google.com/jsapi',
 	dataType : 'script',
 	cache : true,
 	success : function() {
